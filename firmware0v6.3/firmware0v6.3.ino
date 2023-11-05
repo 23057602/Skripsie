@@ -1,0 +1,33 @@
+//v6.3 tests i2s lines (Failed, refer to I2S simple tone example)
+//Includes////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#include "proj_Bt.h"
+//#include "proj_Codec.h"
+//#include "proj_IO.h"
+
+//Main Program///////////////////////////////////////////////////////
+void setup() {
+  // put your setup code here, to run once:
+  //Pin out
+  //byte itr = 19;
+  //byte scl = 22;
+  //byte sda = 21;
+  byte mck = 27;
+  byte bck = 25;
+  byte ws = 26;
+  byte sdin = 14;
+  byte sdout = 33;
+  //byte play = 26;
+  //byte source = 25;
+  
+  blu_init();
+  blu_i2s_init((int) mck, (int) bck, (int) ws, (int) sdin, (int) sdout);
+  blu_start();
+  //codec_init( (int) itr, (int) scl, (int) sda);
+  //btn_init( (int) play, (int) source);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  //go_btns();
+  //sendData();
+}
